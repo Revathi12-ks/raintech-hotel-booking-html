@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Raintech Hotel Booking</title>
+<!-- cSpell:ignore Raintech -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand"><b>RH</b><span><strong>Raintech Hotel</strong><small>Room Booking</small></span></div><em>Booking Portal</em></header>
+<main>
+<section class="hero"><small>HOTEL ROOM RESERVATION</small><h1>Find your perfect room</h1><p>Select dates and one available room. Nights and total price are calculated automatically.</p></section>
+
+<section class="grid">
+<div class="card">
+<h2><i>1</i> Select your dates</h2>
+<p class="hint">Check-in cannot be in the past.</p>
+<div class="dates">
+<label>Check-in<input id="checkIn" type="date"></label>
+<label>Check-out<input id="checkOut" type="date"></label>
+</div>
+<div id="dateError" class="error"></div>
+<label class="guest">Guests<select id="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></label>
+</div>
+
+<div class="card">
+<h2><i>2</i> Select one room</h2><p class="hint">Choose from the available rooms below.</p>
+<div id="rooms"></div><div id="roomError" class="error"></div>
+</div>
+</section>
+
+<section class="card summary">
+<div class="sumhead"><div><small>BOOKING SUMMARY</small><h2>Your reservation</h2></div><span id="status">Select dates and a room</span></div>
+<div class="summarygrid">
+<div>Room<strong id="sRoom">—</strong></div><div>Check-in<strong id="sIn">—</strong></div>
+<div>Check-out<strong id="sOut">—</strong></div><div>Number of nights<strong id="sNights">0</strong></div>
+<div class="total">Total price<strong id="sTotal">₹0</strong></div>
+</div>
+<button id="confirm" disabled>Confirm Booking</button><p id="success" class="success"></p>
+</section>
+</main>
+<footer>Raintech Hotel Booking • Developer Skills Assessment</footer>
+<script src="script.js"></script>
+</body></html>
